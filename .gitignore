@@ -1,0 +1,42 @@
+# Системные файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы, создаваемые IDE
+.vs/
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.sdf
+*.log
+*.tmp
+*.bak
+*.swp
+*.lock
+
+# Unity
+/coolguy1/Library/
+/coolguy1/Logs/
+/coolguy1/Temp/
+/coolguy1/obj/
+/coolguy1/Build/
+/coolguy1/Builds/
+/coolguy1/MemoryCaptures/
+/coolguy1/UserSettings/
+
+# Пакеты и зависимости
+Packages/*
+!Packages/manifest.json
+
+# Локальные настройки
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.ilk
+*.exp
+*.exe
+*.apk
+*.xcodeproj/
+*.xcworkspace/

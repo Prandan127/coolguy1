@@ -28,21 +28,23 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Update()
     {
-        CheckForPlayer();
-        if (attackCooldownTimer > 0)
+        if (enemyState != EnemyState.Knockback)
         {
-            attackCooldownTimer -= Time.deltaTime;
-        }
-        if (enemyState == EnemyState.Chasing)
-        {
-            Chase();
-        }
-        else if (enemyState  == EnemyState.Attacking)
-        {
-            //Do Attacky stuff
+            CheckForPlayer();
+            if (attackCooldownTimer > 0)
+            {
+                attackCooldownTimer -= Time.deltaTime;
+            }
+            if (enemyState == EnemyState.Chasing)
+            {
+                Chase();
+            }
+            else if (enemyState == EnemyState.Attacking)
+            {
 #pragma warning disable CS0618 // Тип или член устарел
-            rb.velocity = Vector3.zero;
+                rb.velocity = Vector3.zero;
 #pragma warning restore CS0618 // Тип или член устарел
+            }
         }
     }
 
@@ -92,7 +94,7 @@ public class Enemy_Movement : MonoBehaviour
         }
     }
 
-    void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         //выйти из текущей анимации
         if (enemyState == EnemyState.Idle)
@@ -137,4 +139,5 @@ public enum EnemyState
     Idle,
     Chasing,
     Attacking,
+    Knockback,
 }

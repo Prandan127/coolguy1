@@ -8,9 +8,18 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5;
     public Rigidbody2D rb;
     public Animator anim;
+    public PlayerCombat playerCombat;
 
     private int facingDirection = 1;
-    private bool isKnockedBack; 
+    private bool isKnockedBack;
+
+    private void Update()
+    {
+        if (Input.GetButton("Attack"))
+        {
+            playerCombat.Attack();
+        }
+    }
     void FixedUpdate()
     {
         if (!isKnockedBack)

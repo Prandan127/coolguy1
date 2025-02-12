@@ -1503,6 +1503,7 @@ GameObject:
   - component: {fileID: 958728710}
   - component: {fileID: 958728705}
   - component: {fileID: 958728711}
+  - component: {fileID: 958728712}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1525,6 +1526,7 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 958728706}
   anim: {fileID: 958728710}
+  playerCombat: {fileID: 958728712}
 --- !u!50 &958728706
 Rigidbody2D:
   serializedVersion: 5
@@ -1658,6 +1660,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519420032}
+  - {fileID: 1875704577}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &958728710
@@ -1698,6 +1701,29 @@ MonoBehaviour:
   currentHealth: 3
   healthText: {fileID: 1496729405}
   healthTextAnim: {fileID: 1496729407}
+--- !u!114 &958728712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958728704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410697a58b31c0c42b8ea738ad9623ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 958728710}
+  cooldown: 2
+  attackPoint: {fileID: 1875704577}
+  weaponRange: 0.7
+  knockbackForce: 20
+  knockbackTime: 0.15
+  stunTime: 0.3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  damage: 1
 --- !u!1 &1216444086
 GameObject:
   m_ObjectHideFlags: 0
@@ -22663,7 +22689,9 @@ GameObject:
   - component: {fileID: 1688548308}
   - component: {fileID: 1688548309}
   - component: {fileID: 1688548310}
-  m_Layer: 0
+  - component: {fileID: 1688548311}
+  - component: {fileID: 1688548312}
+  m_Layer: 7
   m_Name: Enemy_Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22797,7 +22825,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -4230181108591323607, guid: 70beaa2185bbfd040a2d607731c81817, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22904,6 +22932,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1688548311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688548302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223de4f5d67f5c14f8780c4979e23b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 5
+--- !u!114 &1688548312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688548302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1623fb017a0b94485218d1c89b89bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783545915
 GameObject:
   m_ObjectHideFlags: 0
@@ -23006,6 +23060,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1875704576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875704577}
+  m_Layer: 6
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1875704577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875704576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.465, y: -0.087, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 958728709}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

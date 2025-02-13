@@ -7113,6 +7113,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  statsUI: {fileID: 598484692}
 --- !u!1 &1077864665
 GameObject:
   m_ObjectHideFlags: 0

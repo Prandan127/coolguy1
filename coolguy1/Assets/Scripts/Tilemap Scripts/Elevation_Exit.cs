@@ -19,6 +19,6 @@ public class Elevation_Exit : MonoBehaviour
             }
         }
 
-        collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
+        collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
     }
 }

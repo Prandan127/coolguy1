@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -27.843498, y: 8.67025}
-  m_SizeDelta: {x: 55.686996, y: 17.3405}
+  m_AnchoredPosition: {x: -35.6547, y: 8.67025}
+  m_SizeDelta: {x: 71.3093, y: 17.3405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4973463389609691380
 CanvasRenderer:
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/5
+  m_text: Locked
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -14.895706, y: 0, z: -14.895695, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 3807754320303141297}
   - component: {fileID: 7691131119614145752}
   - component: {fileID: 807081515755131314}
+  - component: {fileID: 4289273925739846656}
   m_Layer: 0
   m_Name: SkillButton
   m_TagString: Untagged
@@ -334,6 +335,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4289273925739846656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490878802019177767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillSO: {fileID: 0}
+  skillIcon: {fileID: 5215155675681732912}
+  skillLevelText: {fileID: 9099936366984939850}
+  skillButton: {fileID: 807081515755131314}
+  currentLevel: 0
+  isUnlocked: 0
 --- !u!1 &4824348831643910209
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -2818,6 +2818,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (9)
@@ -2920,6 +2928,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (4)
@@ -3413,6 +3429,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (4)
@@ -3924,6 +3948,7 @@ GameObject:
   - component: {fileID: 507695529}
   - component: {fileID: 507695528}
   - component: {fileID: 507695531}
+  - component: {fileID: 507695532}
   m_Layer: 0
   m_Name: SkillCanvas
   m_TagString: Untagged
@@ -4022,10 +4047,49 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507695526}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &507695532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507695526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadf4fdc3a3e4e14cb926783a49674a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillSlots:
+  - {fileID: 8864190285481644543}
+  - {fileID: 1654543622}
+  - {fileID: 782359580}
+  - {fileID: 567130680}
+  - {fileID: 614675507}
+  - {fileID: 978245559}
+  - {fileID: 1919922566}
+  - {fileID: 1476116116}
+  - {fileID: 902886952}
+  - {fileID: 1537374575}
+  - {fileID: 2132176794}
+  - {fileID: 581310120}
+  - {fileID: 676352993}
+  - {fileID: 2072935058}
+  - {fileID: 1431604847}
+  - {fileID: 1247374592}
+  - {fileID: 1636938241}
+  - {fileID: 1848061677}
+  - {fileID: 1679782307}
+  - {fileID: 1660382686}
+  - {fileID: 1802850295}
+  - {fileID: 557575597}
+  - {fileID: 1717306959}
+  - {fileID: 1909810002}
+  pointsText: {fileID: 1794987871}
+  availablePoints: 5
 --- !u!1 &509996478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,6 +4338,17 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &557575597 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 140160832}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &567130678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4282,6 +4357,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: prerequisSkillSlots.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8864190285481644543}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1919922566}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1537374575}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1919922566}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (3)
@@ -4376,6 +4479,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 567130678}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &567130680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 567130678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &581310118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4384,6 +4498,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (11)
@@ -4478,6 +4600,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 581310118}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &581310120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 581310118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &588882087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4486,6 +4619,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: FireMagic
@@ -4493,7 +4634,7 @@ PrefabInstance:
     - target: {fileID: 5215155675681732912, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6734237056663082788, guid: 5fa2106315a2d3043aa06bb456810959, type: 3}
+      objectReference: {fileID: 5461583279877749565, guid: 8d7b453e738b3014cbea43bd3076c7ec, type: 3}
     - target: {fileID: 5581608588278349231, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_SizeDelta.x
       value: 66
@@ -6652,6 +6793,17 @@ MonoBehaviour:
   - {fileID: 359271308}
   - {fileID: 1408120625}
   statsCanvas: {fileID: 814782423}
+--- !u!114 &614675507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 144533276}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &624976157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7052,6 +7204,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (7)
@@ -7146,6 +7306,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 668058908}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &676352993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 588882087}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &706321379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8701,6 +8872,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (2)
@@ -8795,6 +8974,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 782359578}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &782359580 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 782359578}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &793514848
 GameObject:
   m_ObjectHideFlags: 0
@@ -9663,6 +9853,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (8)
@@ -9757,6 +9955,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 902886950}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &902886952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 902886950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916207341
 GameObject:
   m_ObjectHideFlags: 0
@@ -9980,6 +10189,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (8)
@@ -10310,6 +10527,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (5)
@@ -10412,6 +10637,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (5)
@@ -10506,6 +10739,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 978245557}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &978245559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 978245557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1057744334
 GameObject:
   m_ObjectHideFlags: 0
@@ -33749,6 +33993,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (3)
@@ -33843,6 +34095,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1247374590}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1247374592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1247374590}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1292402123
 GameObject:
   m_ObjectHideFlags: 0
@@ -35103,6 +35366,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (10)
@@ -36343,6 +36614,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (2)
@@ -36437,6 +36716,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1431604845}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1431604847 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1431604845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1447733106
 GameObject:
   m_ObjectHideFlags: 0
@@ -36584,6 +36874,17 @@ RectTransform:
   m_AnchoredPosition: {x: 178, y: -295}
   m_SizeDelta: {x: 339, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1476116116 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 668058908}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1482232065
 GameObject:
   m_ObjectHideFlags: 0
@@ -36860,6 +37161,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: prerequisSkillSlots.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1919922566}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1919922566}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1537374575}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (9)
@@ -36954,6 +37279,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1537374573}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1537374575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1537374573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1562897868
 GameObject:
   m_ObjectHideFlags: 0
@@ -37754,6 +38090,17 @@ MonoBehaviour:
   - {fileID: 591561867}
   upperBoundaryColliders:
   - {fileID: 793514850}
+--- !u!114 &1636938241 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 328825564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646208497
 GameObject:
   m_ObjectHideFlags: 0
@@ -37890,6 +38237,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (1)
@@ -37984,6 +38339,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1654543620}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1654543622 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1654543620}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1660382684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37992,6 +38358,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (7)
@@ -38086,6 +38460,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1660382684}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1660382686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1660382684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1679782305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38094,6 +38479,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (6)
@@ -38188,6 +38581,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1679782305}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679782307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1679782305}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1688548302
 GameObject:
   m_ObjectHideFlags: 0
@@ -38482,6 +38886,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (10)
@@ -38576,6 +38988,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1717306957}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1717306959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1717306957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1776061112
 GameObject:
   m_ObjectHideFlags: 0
@@ -38889,6 +39312,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794987869}
   m_CullTransparentMesh: 1
+--- !u!114 &1802850295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 945968739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1817882202
 GameObject:
   m_ObjectHideFlags: 0
@@ -40363,6 +40797,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835608444}
   m_CullTransparentMesh: 1
+--- !u!114 &1848061677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 971174605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1875704576
 GameObject:
   m_ObjectHideFlags: 0
@@ -40402,6 +40847,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (11)
@@ -40496,6 +40949,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1909810000}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1909810002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1909810000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1919922564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40504,6 +40968,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: prerequisSkillSlots.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 567130680}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1537374575}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (6)
@@ -40598,6 +41090,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 1919922564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1919922566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1919922564}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1922310735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41229,6 +41732,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 30960589}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton (1)
@@ -41323,6 +41834,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 2072935056}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2072935058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 2072935056}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2102359968
 GameObject:
   m_ObjectHideFlags: 0
@@ -41400,6 +41922,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102359968}
   m_CullTransparentMesh: 1
+--- !u!114 &2132176794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 1408291705}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8864190285481644541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41408,9 +41941,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1057744335}
     m_Modifications:
+    - target: {fileID: 807081515755131314, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: skillSO
+      value: 
+      objectReference: {fileID: 11400000, guid: bad37f67b43035b4f9f5a3ac9041edb1, type: 2}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: prerequisSkillSlots.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: 'prerequisSkillSlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 567130680}
     - target: {fileID: 4490878802019177767, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Name
       value: SkillButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215155675681732912, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215155675681732912, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215155675681732912, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
       propertyPath: m_Pivot.x
@@ -41492,6 +42057,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9099936366984939850, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+      propertyPath: m_text
+      value: 0/5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41502,6 +42071,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8050185902072193182, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
   m_PrefabInstance: {fileID: 8864190285481644541}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8864190285481644543 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4289273925739846656, guid: ba7de34b04c32314ab25fb9aacb162ca, type: 3}
+  m_PrefabInstance: {fileID: 8864190285481644541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

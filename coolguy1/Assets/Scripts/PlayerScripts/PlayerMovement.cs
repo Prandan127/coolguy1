@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton("Attack"))
+        if (Input.GetButton("Attack") && playerCombat.enabled == true)
         {
             playerCombat.Attack();
         }

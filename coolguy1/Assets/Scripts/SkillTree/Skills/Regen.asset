@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 913663768a0087c478abf197cfad66f8, type: 3}
-  m_Name: CombatUnlock
+  m_Name: Regen
   m_EditorClassIdentifier: 
-  skillName: Sword Slash
+  skillName: Regen
   maxLevel: 1
-  skillIcon: {fileID: 737231511072755166, guid: de34b8a63660bb541ae7df13a15cfffe, type: 3}
+  skillIcon: {fileID: 616922437432179931, guid: 1f3b972df78919b4d8134b1e26d93b63, type: 3}

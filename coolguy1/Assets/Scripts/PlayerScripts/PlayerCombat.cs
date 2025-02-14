@@ -6,7 +6,6 @@ public class PlayerCombat : MonoBehaviour
     public Animator anim;
     public Transform attackPoint;
     public LayerMask enemyLayer;
-    public StatsUI statsUI;
 
     private float timer;
 
@@ -28,9 +27,6 @@ public class PlayerCombat : MonoBehaviour
 
     public void DealDamage()
     {
-        StatsManager.Instance.damage += 1;
-        statsUI.UpdateDamage();
-
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, StatsManager.Instance.weaponRange, enemyLayer);
 
         if (enemies.Length > 0)

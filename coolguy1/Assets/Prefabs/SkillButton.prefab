@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9689a28cd14e441a462ac360943854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prerequisSkillSlots: []
   skillSO: {fileID: 0}
   skillIcon: {fileID: 5215155675681732912}
   skillLevelText: {fileID: 9099936366984939850}

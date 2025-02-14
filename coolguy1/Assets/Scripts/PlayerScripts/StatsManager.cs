@@ -4,6 +4,7 @@ public class StatsManager : MonoBehaviour
 {
     public static StatsManager Instance;
     public TMP_Text healthText;
+    public TMP_Text damageText;
 
     [Header("Combat Stats")]
     public int damage;
@@ -36,5 +37,10 @@ public class StatsManager : MonoBehaviour
     {
         maxHealth += amount;
         healthText.text = "HP: " + currentHealth + " / " + maxHealth;
+    }
+    public void UpdateDamage(int amount)
+    {
+        damage += amount;
+        damageText.text = "Damage: " + damage;
     }
 }

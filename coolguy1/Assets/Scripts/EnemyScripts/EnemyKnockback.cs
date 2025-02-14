@@ -10,11 +10,11 @@ public class EnemyKnockback : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         enemyMovement = GetComponent<EnemyMovement>();
     }
-    public void Knockback(Transform playerTransform, float knockbackForce, float knockbackTime,float stunTime)
+    public void Knockback(Transform forceTransform, float knockbackForce, float knockbackTime,float stunTime)
     {
         enemyMovement.ChangeState(EnemyState.Knockback);
         StartCoroutine(StunTimer(knockbackTime, stunTime));
-        Vector2 direction = (transform.position- playerTransform.position).normalized;
+        Vector2 direction = (transform.position- forceTransform.position).normalized;
 #pragma warning disable CS0618 // Тип или член устарел
         rb.velocity = direction * knockbackForce;
 #pragma warning restore CS0618 // Тип или член устарел

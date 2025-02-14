@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private int facingDirection = 1;
     private bool isKnockedBack;
+    public bool isShooting;
 
     private void Update()
     {
@@ -21,7 +22,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (!isKnockedBack)
+        if (isShooting)
+        {
+#pragma warning disable CS0618 // Тип или член устарел
+            rb.velocity = Vector2.zero;
+#pragma warning restore CS0618 // Тип или член устарел
+        }
+        else if (!isKnockedBack)
         {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");

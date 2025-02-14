@@ -18,14 +18,29 @@ public class SkillManager : MonoBehaviour
         
         switch(skillName)
         {
-            case "Max Health Boost":
+            case "Health":
                 {
                     StatsManager.Instance.UpdateMaxHealth(1);
                     break;
                 }
-            case "Sword Slash":
+            case "CombatUnlock":
                 {
                     combat.enabled = true;
+                    break;
+                }
+            case "Strength":
+                {
+                    StatsManager.Instance.UpdateDamage(1);
+                    break;
+                }
+            case "Agility":
+                {
+
+                    break;
+                }
+            case "Regen":
+                {
+
                     break;
                 }
             default:

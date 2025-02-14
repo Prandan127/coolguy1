@@ -10,6 +10,7 @@ public class StatsManager : MonoBehaviour
     public float knockbackForce;
     public float knockbackTime;
     public float stunTime;
+    public float cooldown;
 
     [Header("Movement Stats")]
     public int speed;

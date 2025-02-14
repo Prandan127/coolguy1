@@ -4,7 +4,6 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public Animator anim;
-    public float cooldown = 2f;
     public Transform attackPoint;
     public LayerMask enemyLayer;
     public StatsUI statsUI;
@@ -13,7 +12,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
-        if (timer > 0)
+        if (timer >= 0)
         {
             timer -= Time.deltaTime;
         }
@@ -23,8 +22,7 @@ public class PlayerCombat : MonoBehaviour
         if (timer <= 0)
         {
             anim.SetBool("isAttacking", true);
-
-            timer = cooldown;
+            timer = StatsManager.Instance.cooldown;
         }
     }
 

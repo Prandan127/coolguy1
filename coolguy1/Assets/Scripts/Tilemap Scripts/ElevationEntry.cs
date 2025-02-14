@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Elevation_Exit : MonoBehaviour
+public class ElevationEntry : MonoBehaviour
 {
     public Collider2D[] mountainColliders;
     public Collider2D[] boundaryColliders;
@@ -11,14 +11,14 @@ public class Elevation_Exit : MonoBehaviour
         {
             foreach (Collider2D mountain in mountainColliders)
             {
-                mountain.enabled = true;
+                mountain.enabled = false;
             }
             foreach (Collider2D boundary in boundaryColliders)
             {
-                boundary.enabled = false;
+                boundary.enabled = true;
             }
+            collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 15;
         }
 
-        collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
     }
 }

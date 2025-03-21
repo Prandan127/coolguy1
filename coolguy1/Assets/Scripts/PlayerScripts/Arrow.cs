@@ -36,10 +36,11 @@ public class Arrow : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
 #pragma warning restore UNT0006 // Incorrect message signature
     {
-        if ((enemyLayer.value & (1 << collision.gameObject.layer)) != 0)
+        if ((enemyLayer.value & (1 << collision.gameObject.layer)) >  0)
         {
             collision.gameObject.GetComponent<EnemyHealth>().ChangeHealth(-damage);
             collision.gameObject.GetComponent<EnemyKnockback>().Knockback(transform, knockbackForce, knockbackTime, stunTime);
+            AttachToTarget(collision.gameObject.transform);
         }
         else if ((obstacleLayer.value & (1 << collision.gameObject.layer)) != 0)
         {
@@ -50,6 +51,7 @@ public class Arrow : MonoBehaviour
     private void AttachToTarget(Transform target)
     {
         sr.sprite = buriedSprite;
+
 #pragma warning disable CS0618 // Тип или член устарел
         rb.velocity = Vector2.zero;
 #pragma warning restore CS0618 // Тип или член устарел

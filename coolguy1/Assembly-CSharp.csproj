@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\SkillTree\SkillManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\Inventory&amp;Shop\ItemSO.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Tilemap Scripts\UpperElevationEntry.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StatsUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Scripts\Inventory&amp;Shop\Loot.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerChangeEquipment.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5293241565575648958}
   - component: {fileID: 2461210729370775831}
   m_Layer: 0
-  m_Name: LootPrefab
+  m_Name: Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,6 +13,7 @@ public class Loot : MonoBehaviour
     private void OnValidate()
     {
         if (itemSO == null) return;
+     
         sr.sprite = itemSO.icon;
         this.name = itemSO.itemName;
     }

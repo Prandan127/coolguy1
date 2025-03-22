@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f0ef6fc085f2834cbb321e0e46a5d9d, type: 3}
-  m_Name: Gold
+  m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  itemName: Gold
+  itemName: 
   itemDescription: 
-  icon: {fileID: -7942359355602504142, guid: 47412d2b4e8023546ac866eaa256b201, type: 3}
+  icon: {fileID: 0}
   isGold: 0
   currentHealth: 0
   maxHealth: 0

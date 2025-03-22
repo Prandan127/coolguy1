@@ -3,6 +3,7 @@ using TMPro;
 public class StatsManager : MonoBehaviour
 {
     public static StatsManager Instance;
+    public StatsUI statsUI;
     public TMP_Text healthText;
     public TMP_Text damageText;
 
@@ -37,6 +38,15 @@ public class StatsManager : MonoBehaviour
     {
         maxHealth += amount;
         healthText.text = "HP: " + currentHealth + " / " + maxHealth;
+    }
+    public void UpdateHealth(int amount)
+    {
+        currentHealth += amount;
+    }
+    public void UpdateSpeed(int amount)
+    {
+        speed += amount;
+        statsUI.UpdateAllStats();
     }
     public void UpdateDamage(int amount)
     {

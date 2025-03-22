@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: 
   icon: {fileID: 21300000, guid: c4da1937fa2aefe46af6d464a49fb965, type: 3}
   isGold: 0
-  currentHealth: 0
+  currentHealth: 5
   maxHealth: 0
   speed: 0
   damage: 0

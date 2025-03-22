@@ -42,6 +42,8 @@ public class StatsManager : MonoBehaviour
     public void UpdateHealth(int amount)
     {
         currentHealth += amount;
+        if (currentHealth >= maxHealth) currentHealth = maxHealth;
+        healthText.text = "HP: " + currentHealth + " / " + maxHealth;
     }
     public void UpdateSpeed(int amount)
     {

@@ -28,6 +28,10 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
                 if (itemSO.currentHealth > 0 && StatsManager.Instance.currentHealth >= StatsManager.Instance.maxHealth) return;
                 inventoryManager.UseItem(this);
             }
+            if (eventData.button == PointerEventData.InputButton.Right)
+            {
+                inventoryManager.DropItem(this);
+            }
         }
     }
 
@@ -41,7 +45,7 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            itemImage.gameObject.SetActive(true);
+            itemImage.gameObject.SetActive(false);
             quantityText.text = "";
         }
     }

@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\Arrow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerBow.cs" />
+    <Compile Include="Assets\Scripts\Inventory&amp;Shop\Shop\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Tilemap Scripts\UpperElevationExit.cs" />
     <Compile Include="Assets\Scripts\SkillTree\SkillSlot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Assets\Scripts\SkillTree\SkillSO.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Scripts\Inventory&amp;Shop\Shop\ShopSlot.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\StatsUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />

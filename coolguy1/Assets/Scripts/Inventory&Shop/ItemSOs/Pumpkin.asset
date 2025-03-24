@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0ef6fc085f2834cbb321e0e46a5d9d, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Pumpkin
   itemDescription: 
   icon: {fileID: 21300000, guid: 1f7745eb968c6ee48b4c471c277da6b0, type: 3}
   isGold: 0

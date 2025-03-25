@@ -22,12 +22,12 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
 
     private void OnEnable()
     {
-        ShopManager.onShopStateChanged += HandleShopStateChanged;
+        ShopKeeper.onShopStateChanged += HandleShopStateChanged;
     }
 
     private void OnDisable()
     {
-        ShopManager.onShopStateChanged -= HandleShopStateChanged;
+        ShopKeeper.onShopStateChanged -= HandleShopStateChanged;
     }
 
     private void HandleShopStateChanged(ShopManager shopManager, bool isOpen)

@@ -3,22 +3,13 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using System;
 
 public class ShopManager : MonoBehaviour
 {
-    public static event Action<ShopManager, bool> onShopStateChanged; 
-    [SerializeField] private List<ShopItems> shopItems;
     [SerializeField] private ShopSlot[] shopSlots;
     [SerializeField] private InventoryManager inventoryManager;
 
-    private void Start()
-    {
-        PopulateShopItems();
-        onShopStateChanged?.Invoke(this, true);
-    }
-
-    public void PopulateShopItems()
+    public void PopulateShopItems(List<ShopItems> shopItems)
     {
         for (int i = 0; i < shopItems.Count && i < shopSlots.Length; i++)
         {

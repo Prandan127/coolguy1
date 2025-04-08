@@ -12,7 +12,7 @@ public class SceneChanger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            fadeAnim.Play("FadeToBlack0");
+            fadeAnim.Play("FadeToBlack");
             StartCoroutine(DelayFade());
         }    
     }

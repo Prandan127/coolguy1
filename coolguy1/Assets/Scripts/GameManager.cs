@@ -7,12 +7,16 @@ public class GameManager : MonoBehaviour
     [Header("Persistent Objects")]
     public GameObject[] persistentObjects;
 
+    [Header("Cached References")]
+    public Camera shopKeeperCam;
+    public CanvasGroup shopCanvasGroup;
+    public ShopManager shopManager;
+
     private void Awake()
     {
         if (Instance != null) 
         {
             CleanAndDestroy();
-            Destroy(gameObject);
             return;
         }
         else
@@ -40,7 +44,6 @@ public class GameManager : MonoBehaviour
         { 
             Destroy(obj);
         }
-
         Destroy(gameObject);
     }
 }

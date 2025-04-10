@@ -22,6 +22,13 @@ public class ShopKeeper : MonoBehaviour
     private bool playerInRange;
     private bool isShopOpen;
 
+    private void Start()
+    {
+        shopKeeperCam = GameManager.Instance.shopKeeperCam;
+        shopCanvasGroup = GameManager.Instance.shopCanvasGroup;
+        shopManager = GameManager.Instance.shopManager;
+    }
+
     private void Update()   
     {
         if (playerInRange)

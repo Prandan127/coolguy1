@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     public Rigidbody2D rb;
     public Animator anim;
     public PlayerCombat playerCombat;
@@ -12,6 +14,18 @@ public class PlayerMovement : MonoBehaviour
     private int facingDirection = 1;
     private bool isKnockedBack;
     public bool isShooting;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Update()
     {

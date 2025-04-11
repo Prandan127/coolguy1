@@ -38,17 +38,19 @@ public class PlayerRespawn : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         deathPanel.alpha = 1.0f;
-        deathPanel.interactable = true;
+        deathPanel.blocksRaycasts = true;
         Time.timeScale = 0;
     }
 
     public void Respawn()
     {
         Time.timeScale = 1;
+        PlayerMovement.Instance.Knockback(spawn, 0, 0);
         player.position = spawn.position;
         StatsManager.Instance.currentHealth = StatsManager.Instance.maxHealth;
+        PlayerHealth.Instance.healthText.text = "HP: " + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;
         deathPanel.alpha = 0f;
-        deathPanel.interactable = false;
+        deathPanel.blocksRaycasts = false;
         SceneChanger.Instance.FadeFromBlack();
     }
 }

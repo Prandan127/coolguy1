@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Tilemap Scripts\ElevationEntry.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyCombat.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyKnockback.cs" />
+    <Compile Include="Assets\Scripts\mememe\SettingsManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\SkillTree\ToggleSkillTree.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />

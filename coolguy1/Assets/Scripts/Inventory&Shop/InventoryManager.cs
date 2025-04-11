@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.VisualScripting;
@@ -8,12 +9,26 @@ using UnityEngine.InputSystem;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager Instance;
+
     public InventorySlot[] itemSlots;
     public UseItem useItem;
     public int gold;
     public TMP_Text goldText;
     public GameObject lootPrefab;
     public Transform player;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void Start()
     {
@@ -83,6 +98,20 @@ public class InventoryManager : MonoBehaviour
             slot.itemSO = null;
         }
         slot.UpdateUI();
+    }
+
+    public void DropAllItems()
+    {
+        foreach (InventorySlot slot in itemSlots)
+        {
+            if (slot.itemSO != null && slot.quantity > 0)
+            {
+                DropLoot(slot.itemSO, slot.quantity);
+                slot.itemSO = null;
+                slot.quantity = 0;
+                slot.UpdateUI();
+            }
+        }
     }
 
     private void DropLoot(ItemSO itemSO, int quantity)

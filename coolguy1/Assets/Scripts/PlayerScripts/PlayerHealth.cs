@@ -21,7 +21,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (StatsManager.Instance.currentHealth <= 0)
         {
-            gameObject.SetActive(false);
+            PlayerRespawn.Instance.PlayerDeath();
+            //gameObject.SetActive(false);
         }
     }
 }

@@ -1,8 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item")]
+[CreateAssetMenu(fileName = "New Item", menuName = "New Item")]
 public class ItemSO : ScriptableObject
 {
+    public string itemID = System.Guid.NewGuid().ToString();
     public string itemName;
     [TextArea] public string itemDescription;
     public Sprite icon;

@@ -42,7 +42,6 @@ public class QuestNPC : MonoBehaviour
 
     private void Update()
     {
-        // Открываем меню по нажатию F
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
         {
             ShowDialogueOptions();

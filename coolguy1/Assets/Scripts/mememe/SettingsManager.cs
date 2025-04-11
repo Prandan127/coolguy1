@@ -71,6 +71,7 @@ public class SettingsManager : MonoBehaviour
         {
             if (settingsOpen)
             {
+                SaveSelector.Instance.RefreshSaveList();
                 Time.timeScale = 1.0f;
                 settingsCanvas.alpha = 0f;
                 settingsCanvas.blocksRaycasts = false;

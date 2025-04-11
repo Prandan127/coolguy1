@@ -1,11 +1,26 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillTreeManager : MonoBehaviour
 {
+    public static SkillTreeManager Instance;
+
     public SkillSlot[] skillSlots;
     public TMP_Text pointsText;
     public int availablePoints;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void OnEnable()
     {
@@ -16,7 +31,7 @@ public class SkillTreeManager : MonoBehaviour
     private void OnDisable()
     {
         SkillSlot.OnAbilityPointSpent -= HandlerAbilityPointsSpent;
-        SkillSlot.OnSkillMaxed -= HandleSkillMaxed; 
+        SkillSlot.OnSkillMaxed -= HandleSkillMaxed;
     }
 
     private void Start()

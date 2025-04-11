@@ -305,6 +305,8 @@ MonoBehaviour:
   priceText: {fileID: 5987495877904907995}
   itemImage: {fileID: 5718220005815679965}
   shopManager: {fileID: 0}
+  shopInfo: {fileID: 0}
+  price: 0
 --- !u!1 &5354501920715302170
 GameObject:
   m_ObjectHideFlags: 0

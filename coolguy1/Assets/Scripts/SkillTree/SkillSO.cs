@@ -4,6 +4,7 @@ using UnityEngine;
 public class SkillSO : ScriptableObject
 {
     public string skillName;
+    public string[] requiredSkills;
     public int maxLevel;
     public Sprite skillIcon;
 }

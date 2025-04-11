@@ -32,6 +32,7 @@ public class InventoryManager : MonoBehaviour
 
     public void Start()
     {
+        goldText.text = InventoryManager.Instance.gold.ToString();
         foreach (var slot in itemSlots)
         {
             slot.UpdateUI();
@@ -133,4 +134,36 @@ public class InventoryManager : MonoBehaviour
             slot.UpdateUI();
         }
     }
+
+    public int GetItemCount(ItemSO itemSO)
+    {
+        foreach (var slot in itemSlots)
+        {
+            if (slot.itemSO == itemSO)
+            {
+                return slot.quantity;
+            }
+        }
+        return 0;
+    }
+
+    public void RemoveItem(ItemSO itemSO, int amount)
+    {
+        foreach (var slot in itemSlots)
+        {
+            if (slot.itemSO == itemSO)
+            {
+                int toRemove = Mathf.Min(slot.quantity, amount);
+                slot.quantity -= toRemove;
+                amount -= toRemove;
+
+                if (slot.quantity <= 0) slot.itemSO = null;
+
+                slot.UpdateUI();
+
+                if (amount <= 0) return;
+            }
+        }
+    }
+
 }

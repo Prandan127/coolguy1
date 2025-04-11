@@ -94,6 +94,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerBow.cs" />
     <Compile Include="Assets\Scripts\Inventory&amp;Shop\Shop\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\mememe\QuestNPC.cs" />
     <Compile Include="Assets\Scripts\Tilemap Scripts\UpperElevationExit.cs" />
     <Compile Include="Assets\Scripts\SkillTree\SkillSlot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Assets\Scripts\mememe\PlayerRespawn.cs" />
     <Compile Include="Assets\Scripts\Inventory&amp;Shop\UseItem.cs" />
     <Compile Include="Assets\Scripts\Inventory&amp;Shop\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\mememe\DialogueUIManager.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\ConfinerFinder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>

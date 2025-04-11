@@ -27,6 +27,8 @@ public class QuestNPC : MonoBehaviour
 
     private bool isPlayerInRange = false;
 
+    public DialogueUIManager dialogueUIManager;
+
     private void Start()
     {
         GameObject boss = GameObject.FindGameObjectWithTag(bossTag);
@@ -34,72 +36,34 @@ public class QuestNPC : MonoBehaviour
         {
             boss.GetComponent<EnemyHealth>().OnDeath += OnBossDeath;
         }
+
+        dialogueUIManager.Initialize(this);
     }
 
     private void Update()
     {
+        // Открываем меню по нажатию F
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.F))
         {
-            Interact();
+            ShowDialogueOptions();
         }
     }
 
-    private void Interact()
+    private void ShowDialogueOptions()
+    {
+        string dialogueText = GetCurrentDialogueText();
+        dialogueUIManager.ShowDialogue(dialogueText);
+    }
+
+    private string GetCurrentDialogueText()
     {
         switch (currentQuest)
         {
-            case QuestState.Mushrooms:
-                HandleMushroomQuest();
-                break;
-            case QuestState.Boss:
-                HandleBossQuest();
-                break;
-            case QuestState.Completed:
-                DialogueUIManager.Instance.ShowDialogue("All quests completed. Thank you!");
-                break;
+            case QuestState.Mushrooms: return mushroomsDialogueBefore;
+            case QuestState.Boss: return bossDialogueBefore;
+            case QuestState.Completed: return "All quests completed!";
+            default: return "Error: Unknown quest state";
         }
-    }
-
-    private void HandleMushroomQuest()
-    {
-        int count = InventoryManager.Instance.GetItemCount(mushroomsRequiredItem);
-
-        if (count >= mushroomsRequiredAmount)
-        {
-            InventoryManager.Instance.RemoveItem(mushroomsRequiredItem, mushroomsRequiredAmount);
-            InventoryManager.Instance.gold += 10;
-            InventoryManager.Instance.goldText.text = InventoryManager.Instance.gold.ToString();
-
-            currentQuest = QuestState.Boss;
-            DialogueUIManager.Instance.ShowDialogue(mushroomsDialogueComplete + "\n" + bossDialogueBefore);
-        }
-        else
-        {
-            if (count == 0)
-                DialogueUIManager.Instance.ShowDialogue(mushroomsDialogueBefore);
-            else
-                DialogueUIManager.Instance.ShowDialogue(mushroomsDialogueNotEnough);
-        }
-    }
-
-    private void HandleBossQuest()
-    {
-        if (bossKilled)
-        {
-            currentQuest = QuestState.Completed;
-            InventoryManager.Instance.gold += 50;
-            InventoryManager.Instance.goldText.text = InventoryManager.Instance.gold.ToString();
-            DialogueUIManager.Instance.ShowDialogue(bossDialogueComplete);
-        }
-        else
-        {
-            DialogueUIManager.Instance.ShowDialogue(bossDialogueNotKilled);
-        }
-    }
-
-    private void OnBossDeath()
-    {
-        bossKilled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -115,6 +79,61 @@ public class QuestNPC : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            dialogueUIManager.HideDialogue();
         }
+    }
+
+    public void Interact()
+    {
+        switch (currentQuest)
+        {
+            case QuestState.Mushrooms: HandleMushroomQuest(); break;
+            case QuestState.Boss: HandleBossQuest(); break;
+            case QuestState.Completed: FinalDialogue(); break;
+        }
+    }
+
+    private void HandleMushroomQuest()
+    {
+        int count = InventoryManager.Instance.GetItemCount(mushroomsRequiredItem);
+
+        if (count >= mushroomsRequiredAmount)
+        {
+            InventoryManager.Instance.RemoveItem(mushroomsRequiredItem, mushroomsRequiredAmount);
+            InventoryManager.Instance.gold += 10;
+            InventoryManager.Instance.goldText.text = InventoryManager.Instance.gold.ToString();
+
+            currentQuest = QuestState.Boss;
+            dialogueUIManager.ShowDialogue(mushroomsDialogueComplete + "\n" + bossDialogueBefore);
+        }
+        else
+        {
+            dialogueUIManager.ShowDialogue(count > 0 ? mushroomsDialogueNotEnough : mushroomsDialogueBefore);
+        }
+    }
+
+    private void HandleBossQuest()
+    {
+        if (bossKilled)
+        {
+            currentQuest = QuestState.Completed;
+            InventoryManager.Instance.gold += 50;
+            InventoryManager.Instance.goldText.text = InventoryManager.Instance.gold.ToString();
+            dialogueUIManager.ShowDialogue(bossDialogueComplete);
+        }
+        else
+        {
+            dialogueUIManager.ShowDialogue(bossDialogueNotKilled);
+        }
+    }
+
+    private void FinalDialogue()
+    {
+        dialogueUIManager.ShowDialogue("Come back later!");
+    }
+
+    private void OnBossDeath()
+    {
+        bossKilled = true;
     }
 }

@@ -1,12 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueUIManager : MonoBehaviour
 {
     public static DialogueUIManager Instance;
 
-    public CanvasGroup canvasGroup;
+    [Header("UI Components")]
+    public CanvasGroup dialoguePanel;
     public TMP_Text dialogueText;
+    public Button talkButton;
+    public Button leaveButton;
+
+    private QuestNPC currentNPC;
 
     private void Awake()
     {
@@ -14,26 +20,42 @@ public class DialogueUIManager : MonoBehaviour
         HideDialogue();
     }
 
-    public void ShowDialogue(string text)
+    public void Initialize(QuestNPC npc)
     {
-        dialogueText.text = text;
-        canvasGroup.alpha = 1;
-        canvasGroup.blocksRaycasts = true;
-        canvasGroup.interactable = true;
+        currentNPC = npc;
+
+        talkButton.onClick.RemoveAllListeners();
+        leaveButton.onClick.RemoveAllListeners();
+
+        talkButton.onClick.AddListener(OnTalkButtonClicked);
+        leaveButton.onClick.AddListener(OnLeaveButtonClicked);
+    }
+
+    public void ShowDialogue(string message)
+    {
+        dialogueText.text = message;
+        dialoguePanel.alpha = 1;
+        dialoguePanel.blocksRaycasts = true;
+        dialoguePanel.interactable = true;
+        Time.timeScale = 0;
     }
 
     public void HideDialogue()
     {
-        canvasGroup.alpha = 0;
-        canvasGroup.blocksRaycasts = false;
-        canvasGroup.interactable = false;
+        dialoguePanel.alpha = 0;
+        dialoguePanel.blocksRaycasts = false;
+        dialoguePanel.interactable = false;
+        Time.timeScale = 1;
     }
 
-    private void Update()
+    public void OnTalkButtonClicked()
     {
-        if (canvasGroup.alpha > 0 && Input.GetKeyDown(KeyCode.Space))
-        {
-            HideDialogue();
-        }
+        currentNPC.Interact();
+        HideDialogue();
+    }
+
+    public void OnLeaveButtonClicked()
+    {
+        HideDialogue();
     }
 }

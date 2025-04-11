@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         { 
             OnMonsterDefeat(expReward);
             Destroy(gameObject);
+            StatsManager.Instance.kills++;
         }
     }
 }

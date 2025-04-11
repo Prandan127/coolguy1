@@ -22,6 +22,10 @@ public class StatsManager : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
 
+    [Header("General Stats")]
+    public int kills;
+    public int deaths;
+
     private void Awake()
     {
         if (Instance == null)

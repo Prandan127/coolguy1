@@ -18838,7 +18838,7 @@ Tilemap:
       - {fileID: -220722732, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -54569715, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -1264183701, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -68738,7 +68738,7 @@ Tilemap:
       - {fileID: -785898710, guid: 3fa6b601ebb813a4eaa4e4d9d59199db, type: 3}
       - {fileID: -675633630, guid: 3fa6b601ebb813a4eaa4e4d9d59199db, type: 3}
       - {fileID: -2041613292, guid: 3fa6b601ebb813a4eaa4e4d9d59199db, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -2, y: -5, z: 0}
@@ -68837,7 +68837,7 @@ Tilemap:
       - {fileID: 4134985361545656292, guid: 3fa6b601ebb813a4eaa4e4d9d59199db, type: 3}
       - {fileID: -1566730818833404899, guid: 3fa6b601ebb813a4eaa4e4d9d59199db, type: 3}
       - {fileID: -7301469273254094464, guid: 3fa6b601ebb813a4eaa4e4d9d59199db, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -87651,6 +87651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 45668539531499751, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
+      propertyPath: m_text
+      value: 'Deaths: 0'
+      objectReference: {fileID: 0}
     - target: {fileID: 110124806884956485, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -87678,6 +87682,10 @@ PrefabInstance:
     - target: {fileID: 297373078081666684, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
       propertyPath: m_SortingOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 456208141163799685, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 500787133207427817, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
       propertyPath: combat
@@ -88107,6 +88115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4767928124854692837, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4893945808493375545, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -88178,6 +88190,10 @@ PrefabInstance:
     - target: {fileID: 5099888654434509186, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522356693139402741, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
+      propertyPath: m_text
+      value: 'KIlls: 0'
       objectReference: {fileID: 0}
     - target: {fileID: 5791970891821779017, guid: 790a26a37fcafa14187cb12e5accdee6, type: 3}
       propertyPath: m_AnchorMax.y

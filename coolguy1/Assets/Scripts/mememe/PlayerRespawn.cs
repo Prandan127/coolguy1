@@ -28,6 +28,7 @@ public class PlayerRespawn : MonoBehaviour
     
     public void PlayerDeath()
     {
+        StatsManager.Instance.deaths++;
         InventoryManager.Instance.DropAllItems();
         SceneChanger.Instance.FadeToBlack();
         StartCoroutine(DeathDelay());

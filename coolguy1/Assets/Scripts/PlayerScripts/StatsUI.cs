@@ -43,10 +43,21 @@ public class StatsUI : MonoBehaviour
     {
         statsSlots[1].GetComponentInChildren<TMP_Text>().text = "Speed: " + StatsManager.Instance.speed;
     }
+    public void UpdateKills()
+    {
+        statsSlots[8].GetComponentInChildren<TMP_Text>().text = "Kills: " + StatsManager.Instance.kills;
+    }
+    public void UpdateDeaths()
+    {
+        statsSlots[9].GetComponentInChildren<TMP_Text>().text = "Deaths: " + StatsManager.Instance.deaths;
+    }
+
 
     public void UpdateAllStats()
     {
         UpdateDamage();
         UpdateSpeed();
+        UpdateKills();
+        UpdateDeaths();
     }
 }

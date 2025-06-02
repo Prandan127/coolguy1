@@ -20689,7 +20689,7 @@ Tilemap:
       - {fileID: -220722732, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -54569715, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -1264183701, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 30, y: -30, z: 0}
@@ -20809,7 +20809,7 @@ Tilemap:
       - {fileID: -220722732, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -54569715, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -1264183701, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -30, y: -18, z: 0}
@@ -20854,7 +20854,7 @@ Tilemap:
       - {fileID: -258098149, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -1417519595, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: 766188562, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -29, y: -17, z: 0}
@@ -21004,7 +21004,7 @@ Tilemap:
       - {fileID: 449556411, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: 1878327581, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: 1588278567, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -19, y: 3, z: 0}
@@ -21034,7 +21034,7 @@ Tilemap:
       - {fileID: -258098149, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: -1417519595, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
       - {fileID: 766188562, guid: 5cebf07cffa98f441bbe52fbf08b28e3, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -19, y: 4, z: 0}

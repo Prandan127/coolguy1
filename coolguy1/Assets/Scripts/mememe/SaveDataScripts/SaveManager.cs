@@ -23,11 +23,6 @@ public class SaveManager : MonoBehaviour
     public void SaveGame(TMP_InputField inputField)
     {
         Debug.Log("SaveGame called!");
-        if (inputField == null)
-        {
-            Debug.LogError("inputField is null!");
-            return;
-        }
         string saveName = inputField.text;
         SaveData data = new SaveData();
 
@@ -51,20 +46,16 @@ public class SaveManager : MonoBehaviour
                 data.skillTree.Add(new SkillSlotData { skillName = slot.skillSO.skillName, skillLevel = slot.skillLevel, isUnlocked = slot.isUnlocked });
             }
         }
-        else
-        {
-            Debug.LogError("SkillTreeManager.Instance is null!");
-        }
+        else Debug.LogError("SkillTreeManager.Instance is null!");
 
+#pragma warning disable CS0618 // Тип или член устарел
         QuestNPC questNPC = FindObjectOfType<QuestNPC>();
+#pragma warning restore CS0618 // Тип или член устарел
         if (questNPC != null)
         {
             data.questState = questNPC.currentQuest;
         }
-        else
-        {
-            Debug.LogError("QuestNPC not found in the scene!");
-        }
+        else Debug.LogError("QuestNPC not found in the scene!");
 
         XmlSerializer serializer = new XmlSerializer(typeof(SaveData));
         string path = Path.Combine(Application.persistentDataPath, saveName + ".xml");
@@ -118,27 +109,17 @@ public class SaveManager : MonoBehaviour
                         }
                     }
                 }
-                else
-                {
-                    Debug.LogError("SkillTreeManager.Instance is null!");
-                }
+                else Debug.LogError("SkillTreeManager.Instance is null!");
 
+#pragma warning disable CS0618 // Тип или член устарел
                 QuestNPC questNPC = FindObjectOfType<QuestNPC>();
-                if (questNPC != null)
-                {
-                    questNPC.currentQuest = data.questState;
-                }
-                else
-                {
-                    Debug.LogError("QuestNPC not found in the scene!");
-                }
+#pragma warning restore CS0618 // Тип или член устарел
+                if (questNPC != null) questNPC.currentQuest = data.questState;
+                else Debug.LogError("QuestNPC not found in the scene!");
 
                 Debug.Log("Game Loaded from " + path);
             }
         }
-        else
-        {
-            Debug.LogWarning("Save file not found in " + path);
-        }
+        else Debug.LogWarning("Save file not found in " + path);
     }
 }

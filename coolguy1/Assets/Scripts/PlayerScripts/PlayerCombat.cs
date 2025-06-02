@@ -9,7 +9,7 @@ public class PlayerCombat : MonoBehaviour
 
     private float timer;
 
-    private void Update()
+    public void Update()
     {
         if (timer >= 0)
         {

@@ -61,6 +61,7 @@
     <Analyzer Include="D:\6000.0.37f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Tests\Editor\PlayerCombatTests.cs" />
     <Compile Include="Assets\Tests\Editor\PlayerMovementTests.cs" />
     <Compile Include="Assets\Tests\Editor\PlayerHealthTests.cs" />
   </ItemGroup>

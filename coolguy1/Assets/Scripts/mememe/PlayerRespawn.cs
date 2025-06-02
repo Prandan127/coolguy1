@@ -1,12 +1,13 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
+using Assets.Scripts.Interfaces;
 
-public class PlayerRespawn : MonoBehaviour
+public class PlayerRespawn : MonoBehaviour, IPlayerRespawn
 {
-    public static PlayerRespawn Instance;
-    
+    public static IPlayerRespawn Instance;
+
     private Transform spawn;
-    
+
     public CanvasGroup deathPanel;
     public Transform player;
 
@@ -21,11 +22,12 @@ public class PlayerRespawn : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
         spawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
     }
-    
+
     public void PlayerDeath()
     {
         StatsManager.Instance.deaths++;
@@ -34,7 +36,7 @@ public class PlayerRespawn : MonoBehaviour
         StartCoroutine(DeathDelay());
     }
 
-    IEnumerator DeathDelay()
+    private IEnumerator DeathDelay()
     {
         yield return new WaitForSeconds(1.5f);
         deathPanel.alpha = 1.0f;

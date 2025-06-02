@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using Assets.Scripts.Interfaces;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -34,7 +35,6 @@ public class PlayerHealth : MonoBehaviour
         if (StatsManager.Instance.currentHealth <= 0)
         {
             PlayerRespawn.Instance.PlayerDeath();
-            //gameObject.SetActive(false);
         }
 
         healthText.text = "HP: " + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;

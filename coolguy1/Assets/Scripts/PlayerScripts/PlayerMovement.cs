@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public PlayerCombat playerCombat;
 
-    private int facingDirection = 1;
+    public int facingDirection = 1;
     private bool isKnockedBack;
     public bool isShooting;
 
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Flip()
+    public void Flip()
     {
         facingDirection *= -1;
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);

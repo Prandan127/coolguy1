@@ -62,8 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Tests\Editor\PlayerCombatTests.cs" />
+    <Compile Include="Assets\Tests\Editor\EnemyCombatTests.cs" />
     <Compile Include="Assets\Tests\Editor\PlayerMovementTests.cs" />
     <Compile Include="Assets\Tests\Editor\PlayerHealthTests.cs" />
+    <Compile Include="Assets\Tests\Editor\AnimatorStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 using TMPro;
-using UnityEditor.Animations;
+using Assets.Scripts.Interfaces;
 
 public class PlayerHealthTests
 {
@@ -9,8 +9,9 @@ public class PlayerHealthTests
     private PlayerHealth playerHealth;
     private GameObject statsGO;
     private GameObject respawnGO;
+    private PlayerRespawnMock mockRespawn;
 
-    public class PlayerRespawnMock : MonoBehaviour
+    public class PlayerRespawnMock : MonoBehaviour, IPlayerRespawn
     {
         public bool DeathCalled { get; private set; }
 
@@ -25,15 +26,13 @@ public class PlayerHealthTests
     {
         statsGO = new GameObject("StatsManager");
         var statsManager = statsGO.AddComponent<StatsManager>();
-        statsManager.currentHealth = 100;
         statsManager.maxHealth = 100;
+        statsManager.currentHealth = 100;
         StatsManager.Instance = statsManager;
 
-        respawnGO = new GameObject("Respawn");
-        var mockRespawn = respawnGO.AddComponent<PlayerRespawnMock>();
-        PlayerRespawn.Instance = null;
-        PlayerRespawn.Instance = respawnGO.AddComponent<PlayerRespawn>();
-        respawnGO.AddComponent<PlayerRespawnMock>();
+        respawnGO = new GameObject("PlayerRespawn");
+        mockRespawn = respawnGO.AddComponent<PlayerRespawnMock>();
+        PlayerRespawn.Instance = mockRespawn;
 
         playerGO = new GameObject("PlayerHealth");
         playerHealth = playerGO.AddComponent<PlayerHealth>();
@@ -46,10 +45,6 @@ public class PlayerHealthTests
         var animatorGO = new GameObject("Animator");
         animatorGO.transform.parent = playerGO.transform;
         var animator = animatorGO.AddComponent<Animator>();
-
-        var controller = AnimatorController.CreateAnimatorControllerAtPathWithClip("Assets/Temp.controller", null);
-        animator.runtimeAnimatorController = controller;
-
         playerHealth.healthTextAnim = animator;
     }
 
@@ -67,7 +62,6 @@ public class PlayerHealthTests
     public void ChangeHealth_UpdatesHealthText()
     {
         playerHealth.healthText.text = "HP: " + StatsManager.Instance.currentHealth + " / " + StatsManager.Instance.maxHealth;
-
         Assert.AreEqual("HP: 100 / 100", playerHealth.healthText.text);
 
         playerHealth.ChangeHealth(-30);
@@ -78,8 +72,6 @@ public class PlayerHealthTests
     [Test]
     public void ChangeHealth_TriggersPlayerDeath_WhenHealthZeroOrLess()
     {
-        var mockRespawn = respawnGO.GetComponent<PlayerRespawnMock>();
-
         playerHealth.ChangeHealth(-100);
 
         Assert.IsTrue(mockRespawn.DeathCalled);
